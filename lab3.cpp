@@ -38,7 +38,16 @@ class Zawodnik{
 			this->pesel=p;
 			this->data_uro=d;
 			this->punkty=pu;
-		}	
+		}
+		Zawodnik(string k,int w4,int w5,int w6,string p,string d,int pu){
+			this->klub=k;
+			this->w1=w4;
+			this->w2=w5;
+			this->w3=w6;
+			this->pesel=p;
+			this->data_uro=d;
+			this->punkty=pu;
+		}
 		~Zawodnik(){
 			cout<<"Destruction!!!"<<endl;
 		}
@@ -46,6 +55,8 @@ class Zawodnik{
 void Zawodnik::wyswietl(class Zawodnik* tab, int ilosc){
 	for (int i = 0; i < ilosc; i++){
 		cout << "Nazwisko, imie: " << tab[i].nazwisko << " " << tab[i].imie << endl;
+		cout << "Klub: "<< tab[i].klub << endl;
+		cout << "Pesel: " << tab[i].pesel << endl;
 		cout << "Miejsce po pierwszym wyscigu: " << tab[i].w1 << endl;
 		cout << "Miejsce po drugim wyscigu: " << tab[i].w2 << endl;
 		cout << "Miejsce po trzecim wyscigu: " << tab[i].w3 << endl << endl;
@@ -117,6 +128,7 @@ void Zawodnik::pobierz(class Zawodnik* tab, int ilosc){
 int main(int argc, char** argv) {
 	Zawodnik test();
 	Zawodnik test1("aaa","bbb","ccc",4,4,4,"pesel","urodziny",12);
+	Zawodnik test2("akacz",1,3,3,"lesep","dziny",22);
 	int n;
 	cout << "Podaj liczbe zawodnikow: ";
 	cin>>n;
