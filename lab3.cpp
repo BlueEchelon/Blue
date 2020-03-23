@@ -13,22 +13,35 @@ class Zawodnik{
 		string data_uro;
 		int punkty;
 	public:
-		Zawodnik(string n="Brak",string i="Brak",string k="brak klubu",int w4=0,int w5=0,int w6=0,string p="brak peselu",string d="Nie urodzony",int pu=0){
-			nazwisko=n;
-			imie=i;
-			klub=k;
-			w1=w4;
-			w2=w5;
-			w3=w6;
-			pesel=p;
-			data_uro=d;
-			punkty=pu;
-		}
 		void pobierz(class Zawodnik* tab, int ilosc);
 		void wyniki(class Zawodnik* tab,int ilosc);
 		void wyswietl(class Zawodnik* tab, int ilosc);
-		void zwyciesca(class Zawodnik* tab,int ilosc);		
-		//~Zawodnik();
+		void zwyciesca(class Zawodnik* tab,int ilosc);	
+		Zawodnik(){
+			this->nazwisko;
+			this->imie;
+			this->klub;
+			this->w1;
+			this->w2;
+			this->w3;
+			this->pesel;
+			this->data_uro;
+			this->punkty;
+		}
+		Zawodnik(string n,string i,string k,int w4,int w5,int w6,string p,string d,int pu){
+			this->nazwisko=n;
+			this->imie=i;
+			this->klub=k;
+			this->w1=w4;
+			this->w2=w5;
+			this->w3=w6;
+			this->pesel=p;
+			this->data_uro=d;
+			this->punkty=pu;
+		}	
+		~Zawodnik(){
+			cout<<"Destruction!!!"<<endl;
+		}
 };
 void Zawodnik::wyswietl(class Zawodnik* tab, int ilosc){
 	for (int i = 0; i < ilosc; i++){
@@ -102,6 +115,8 @@ void Zawodnik::pobierz(class Zawodnik* tab, int ilosc){
 	}
 }
 int main(int argc, char** argv) {
+	Zawodnik test();
+	Zawodnik test1("aaa","bbb","ccc",4,4,4,"pesel","urodziny",12);
 	int n;
 	cout << "Podaj liczbe zawodnikow: ";
 	cin>>n;
