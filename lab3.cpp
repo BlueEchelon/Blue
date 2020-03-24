@@ -165,12 +165,12 @@ int main(int argc, char** argv) {
 			break;
 		case 0:
 			system("cls");
-			cout<<"Dziekujemy za skorzystanie z naszej aplikacji, zyczymy milego dnia";
+			cout<<"Dziekujemy za skorzystanie z naszej aplikacji, zyczymy milego dnia\n";
 			delete dane;
 			break;
 		default:
 			system("cls");
-			cout<<"Wybrano zly numer, sprubuj ponownie";
+			cout<<"Wybrano zly numer, sprubuj ponownie\n";
 			getche();
 			break;	
 		}
