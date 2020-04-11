@@ -21,6 +21,7 @@ class Zawodnik{
 		friend Zawodnik operator +(class Zawodnik a,class Zawodnik b);
 		
 };
+//przeciążenie operatora plus;
 Zawodnik operator +(class Zawodnik a,class Zawodnik b){
 	Zawodnik twor("monstrum",a.w1+b.w1,a.w2+b.w2,a.w3+b.w3);
 	wyswietl(twor);
@@ -31,6 +32,7 @@ void wyswietl(class Zawodnik a){
 	cout << "Miejsce po drugim wyscigu: " << a.w2 << endl;
 	cout << "Miejsce po trzecim wyscigu: " << a.w3 << endl << endl;
 }
+// funkcje dla innych zmiennych odpowiadających klassom
 void ktory_lepszy(class Zawodnik a,class Zawodnik b){
 	int suma1=0;
 	int suma2=0;
@@ -59,10 +61,12 @@ int main(int argc, char** argv) {
 	Zawodnik jeden("pierwszy",3,3,3);
 	Zawodnik drugi("dwa",2,2,2);
 	Zawodnik trzeci("trzy",1,1,1);
+	// testy różnych zmiennych
 	ktory_lepszy(drugi,jeden);
 	ktory_lepszy(drugi,trzeci);
 	ktory_lepszy(trzeci,3);
 	ktory_lepszy(drugi,1,2,2);
+	//test operatora
 	jeden+drugi;
 	trzeci+jeden;
 	return 0;
